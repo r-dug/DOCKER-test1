@@ -15,7 +15,7 @@ on:
       - main
 
 env:
-  PROJECT_ID: ${{ secrets.GKE_PROJECT }}
+  PROJECT_ID: resumeassistant
   GKE_CLUSTER: resume-cluster    # Add your cluster name here.
   GKE_ZONE: us-central1   # Add your cluster zone here.
   DEPLOYMENT_NAME: nginx-1 # Add your deployment name here.
@@ -34,8 +34,8 @@ jobs:
     # Setup gcloud CLI
     - uses: google-github-actions/setup-gcloud@1bee7de035d65ec5da40a31f8589e240eba8fde5
       with:
-        service_account_key: ${{ secrets.GKE_SA_KEY }}
-        project_id: ${{ secrets.GKE_PROJECT }}
+        service_account_key: 5350af514bc6846938befff8419a236e023c3b3d
+        project_id: resumeassistant
 
     # Configure Docker to use the gcloud command-line tool as a credential
     # helper for authentication
